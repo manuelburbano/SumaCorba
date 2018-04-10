@@ -5,13 +5,12 @@
  */
 package sumacorba;
 
-import SumaImpl;
-import org.omg.CORBA.ORB;
-import org.omg.CosNaming.NameComponent;
-import org.omg.CosNaming.NamingContextExt;
-import org.omg.CosNaming.NamingContextExtHelper;
+import SumaApp.*;
+//importar la interfaz idl
+import org.omg.CosNaming.*;
+import org.omg.CORBA.*;
+import org.omg.PortableServer.*;
 import org.omg.PortableServer.POA;
-import org.omg.PortableServer.POAHelper;
 
 class SumaImpl extends sumaPOA {
 	private ORB orb;
@@ -34,7 +33,8 @@ class SumaImpl extends sumaPOA {
 }
 
 public class SumaServer {
-    public static void main(String args[]) {
+
+	public static void main(String args[]) {
 		try {
 			ORB orb = ORB.init(args, null);
 			//inicializacion de conexion
@@ -69,5 +69,4 @@ public class SumaServer {
 
 		System.out.println("Adios cerrando servidor");
 	}
-    
 }

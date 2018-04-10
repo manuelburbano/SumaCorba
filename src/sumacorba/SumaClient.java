@@ -4,18 +4,15 @@
  * and open the template in the editor.
  */
 package sumacorba;
-import sumaApp.*;
-import java.util.Scanner;
-import org.omg.CORBA.ORB;
-import org.omg.CosNaming.NamingContextExt;
-import org.omg.CosNaming.NamingContextExtHelper;
 
-/**
- *
- * @author JOSE_
- */
+import java.util.Scanner;
+import SumaApp.*;
+//importar la interfaz idl
+import org.omg.CosNaming.*;
+import org.omg.CORBA.*;
+
 public class SumaClient {
-    static suma sumaImpl;
+	static suma sumaImpl;
 
 	public static void main(String args[]) {
 		Scanner sc = new Scanner (System.in);
